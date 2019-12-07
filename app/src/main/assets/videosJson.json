@@ -1,0 +1,36 @@
+{
+  "numberOfItems": 8,
+  "videos": [ {
+    "title": "Денот на Тесла",
+    "cover": "vid1_denot_na_tesla",
+    "video_id": "ui2-ca-Cr7o"
+  },{
+    "title": "Историја на електрификација во Македонија",
+    "cover": "vid2_istorija_na_elektrifikacija",
+    "video_id": "ci93H59m2IY"
+  },{
+    "title": "Патот на струјата",
+    "cover": "vid3_patoto_na_strujata",
+    "video_id": "mXEulg0a1Yk"
+  },{
+    "title": "Цртежи – Денот на Тесла",
+    "cover": "vid4_crtezi_tesla",
+    "video_id": "g28xG1R15Lo"
+  },{
+    "title": "Енергетска ефикасност",
+    "cover": "vid5_energetska_efikasnost",
+    "video_id": "u8Yr9vqyU_8"
+  },{
+    "title": "Како се пренесува струјата?",
+    "cover": "vid6_kako_se_prenesuva_strujata",
+    "video_id": "Y0roxYTwLwQ"
+  },{
+    "title": "Обновливи извори на енергија",
+    "cover": "vid7_obnovlivi_izvori",
+    "video_id": "qwkQVShCklw"
+  },{
+    "title": "Што е струја?",
+    "cover": "vid8_sto_e_struja",
+    "video_id": "ohWQvr7y93k"
+  }]
+}
