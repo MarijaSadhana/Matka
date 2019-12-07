@@ -9,7 +9,7 @@
     <color name="color_black_matka">#000</color>
 
     <color name="button_text_color">@color/color_white_matka</color>
-    <color name="pressed">#DFDADA</color>
+    <color name="pressed">#F7F7F7</color>
 
 
 </resources>

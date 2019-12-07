@@ -17,7 +17,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:background="@color/color_white_matka"
-        app:itemBackground="@color/color_white_matka"
+        app:itemBackground="@drawable/textview_selector"
         android:layout_gravity="bottom"
         app:itemIconSize="30dp"
         android:layout_alignParentBottom="true"
