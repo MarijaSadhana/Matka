@@ -20,7 +20,8 @@
                 tools:background="@color/colorPrimary"
                 android:adjustViewBounds="true"
                 android:layout_weight="3"
-                android:scaleType="centerCrop"/>
+                android:scaleType="centerCrop"
+                android:foreground="?attr/selectableItemBackground"/>
 
     </androidx.cardview.widget.CardView>
 </LinearLayout>

@@ -22,7 +22,8 @@
                 android:src="@drawable/ic_back_button"
                 android:layout_margin="7dp"
                 android:elevation="5dp"
-                android:onClick="onBackClick"/>
+                android:onClick="onBackClick"
+                android:foreground="?attr/selectableItemBackground"/>
 
             <ImageView
                 android:id="@+id/details_cover"

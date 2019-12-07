@@ -64,7 +64,7 @@ public class VideosFragment extends Fragment implements VideoClickInterface {
                 String videoId = "qwkQVShCklw";
                 Intent intent = new Intent(Intent.ACTION_VIEW, Uri.parse("vnd.youtube:"+videoId));
                 intent.putExtra("VIDEO_ID", videoId);
-                intent.putExtra("force_fullscreen",true);
+                //intent.putExtra("force_fullscreen",true);
                 startActivity(intent);
             }
         });

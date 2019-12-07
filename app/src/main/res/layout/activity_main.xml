@@ -44,7 +44,8 @@
             android:paddingLeft="35dp"
             android:paddingRight="35dp"
             android:onClick="onContinueClick"
-            android:textStyle="bold"/>
+            android:textStyle="bold"
+            android:foreground="?attr/selectableItemBackground"/>
 
     </RelativeLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>

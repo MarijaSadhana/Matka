@@ -21,7 +21,8 @@
                 android:layout_height="wrap_content"
                 android:src="@drawable/map"
                 android:layout_alignParentTop="true"
-                android:adjustViewBounds="true"/>
+                android:adjustViewBounds="true"
+                android:foreground="?attr/selectableItemBackground"/>
 
             <ImageView
                 android:layout_width="match_parent"
@@ -121,7 +122,8 @@
                 android:layout_marginLeft="10dp"
                 android:textColor="@color/color_black_matka"
                 android:textSize="16sp"
-                android:textStyle="bold"/>
+                android:textStyle="bold"
+                android:background="@drawable/textview_selector"/>
 
         </LinearLayout>
 
@@ -150,14 +152,16 @@
                 android:layout_height="40dp"
                 android:layout_marginLeft="20dp"
                 android:layout_marginRight="20dp"
-                android:src="@drawable/ic_bus" />
+                android:src="@drawable/ic_bus"
+                android:background="@drawable/textview_selector"/>
 
             <ImageView
                 android:id="@+id/taxiToMatka"
                 android:layout_width="40dp"
                 android:layout_height="40dp"
                 android:src="@drawable/ic_car"
-                android:layout_marginRight="10dp"/>
+                android:layout_marginRight="10dp"
+                android:background="@drawable/textview_selector"/>
 
 
         </LinearLayout>
@@ -179,7 +183,7 @@
                 android:layout_gravity="center"
                 android:textColor="@color/color_black_matka"
                 android:textSize="16sp"
-                android:textStyle="bold"/>
+                android:textStyle="bold" />
 
             <ImageView
                 android:id="@+id/planeToSkopje"
@@ -187,7 +191,8 @@
                 android:layout_height="40dp"
                 android:src="@drawable/ic_plane"
                 android:layout_marginLeft="10dp"
-                android:layout_marginRight="10dp"/>
+                android:layout_marginRight="10dp"
+                android:foreground="?attr/selectableItemBackground"/>
 
             <ImageView
                 android:id="@+id/busToSkopje"
@@ -195,7 +200,8 @@
                 android:layout_height="40dp"
                 android:src="@drawable/ic_bus"
                 android:layout_marginLeft="10dp"
-                android:layout_marginRight="10dp"/>
+                android:layout_marginRight="10dp"
+                android:background="@drawable/textview_selector"/>
 
             <ImageView
                 android:id="@+id/trainToSkopje"
@@ -203,7 +209,8 @@
                 android:layout_height="40dp"
                 android:src="@drawable/ic_train"
                 android:layout_marginLeft="10dp"
-                android:layout_marginRight="10dp"/>
+                android:layout_marginRight="10dp"
+                android:background="@drawable/textview_selector"/>
 
         </LinearLayout>
 
