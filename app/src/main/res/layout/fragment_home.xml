@@ -1,65 +1,70 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
+<ScrollView android:layout_height="match_parent"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    tools:context=".fragment.HomeFragment"
-    android:orientation="vertical"
-    android:background="@color/color_white_matka">
+    xmlns:android="http://schemas.android.com/apk/res/android">
 
-    <RelativeLayout
+    <LinearLayout
+        xmlns:tools="http://schemas.android.com/tools"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content">
+        android:layout_height="wrap_content"
+        tools:context=".fragment.HomeFragment"
+        android:orientation="vertical"
+        android:background="@color/color_white_matka">
 
-        <ImageView
-            android:id="@+id/home_cover"
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <ImageView
+                android:id="@+id/home_cover"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:src="@drawable/home_cover"
+                android:layout_alignParentTop="true"
+                android:adjustViewBounds="true"/>
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:src="@drawable/overlay"
+                android:adjustViewBounds="true"
+                android:layout_alignBottom="@+id/home_cover"/>
+        </RelativeLayout>
+
+        <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:src="@drawable/home_cover"
-            android:layout_alignParentTop="true"
-            android:adjustViewBounds="true"/>
+            android:text="@string/matka_izlozben_centar"
+            android:layout_marginLeft="15dp"
+            android:layout_marginRight="15dp"
+            android:layout_marginTop="-15dp"
+            android:textColor="@color/color_black_matka"
+            android:textSize="16sp"
+            android:textStyle="bold"/>
 
-        <ImageView
+        <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:src="@drawable/overlay"
-            android:adjustViewBounds="true"
-            android:layout_alignBottom="@+id/home_cover"/>
-    </RelativeLayout>
+            android:layout_margin="15dp"
+            android:textColor="@color/color_black_matka"
+            android:text="@string/home_text"/>
 
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="@string/matka_izlozben_centar"
-        android:layout_marginLeft="15dp"
-        android:layout_marginRight="15dp"
-        android:layout_marginTop="-15dp"
-        android:textColor="@color/color_black_matka"
-        android:textSize="16sp"
-        android:textStyle="bold"/>
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/exponents"
+            android:layout_marginLeft="15dp"
+            android:layout_marginRight="15dp"
+            android:layout_marginTop="15dp"
+            android:textColor="@color/color_black_matka"
+            android:textStyle="bold"
+            android:textSize="16sp"/>
 
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_margin="15dp"
-        android:textColor="@color/color_black_matka"
-        android:text="@string/home_text"/>
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/exponents_recycler_view"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="15dp"/>
 
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="@string/експонати"
-        android:layout_marginLeft="15dp"
-        android:layout_marginRight="15dp"
-        android:layout_marginTop="15dp"
-        android:textColor="@color/color_black_matka"
-        android:textStyle="bold"
-        android:textSize="16sp"/>
-
-    <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/exponents_recycler_view"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_margin="15dp"/>
-
-</LinearLayout>
+    </LinearLayout>
+</ScrollView>

@@ -20,7 +20,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:src="@drawable/ic_back_button"
-                android:layout_margin="5dp"
+                android:layout_margin="7dp"
                 android:elevation="5dp"
                 android:onClick="onBackClick"/>
 
@@ -67,6 +67,6 @@
             android:layout_height="wrap_content"
             android:textColor="@color/color_black_matka"
             android:layout_margin="20dp"
-            tools:text="@string/istorija_lorem"/>
+            tools:text="@string/history_lorem"/>
     </LinearLayout>
 </ScrollView>

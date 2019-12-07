@@ -41,7 +41,7 @@
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="@string/историја"
+            android:text="@string/history"
             android:layout_marginLeft="15dp"
             android:layout_marginRight="15dp"
             android:layout_marginTop="30dp"
@@ -54,6 +54,6 @@
             android:layout_height="wrap_content"
             android:textColor="@color/color_black_matka"
             android:layout_margin="15dp"
-            android:text="@string/istorija_lorem"/>
+            android:text="@string/history_lorem"/>
     </LinearLayout>
 </ScrollView>
