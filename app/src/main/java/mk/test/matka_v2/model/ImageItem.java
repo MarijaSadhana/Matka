@@ -1,11 +1,11 @@
 package mk.test.matka_v2.model;
 
-public class HistoryImage {
+public class ImageItem {
     private int image;
 
-    public HistoryImage (){}
+    public ImageItem(){}
 
-    public HistoryImage (int image){
+    public ImageItem(int image){
         this.image = image;
     }
 

@@ -14,7 +14,6 @@ import java.util.ArrayList;
 
 import mk.test.matka_v2.R;
 import mk.test.matka_v2.interfaces.VideoClickInterface;
-import mk.test.matka_v2.model.Exponent;
 import mk.test.matka_v2.model.Video;
 
 public class VideosAdapter extends RecyclerView.Adapter<VideosAdapter.VideosViewHolder> {
@@ -34,7 +33,7 @@ public class VideosAdapter extends RecyclerView.Adapter<VideosAdapter.VideosView
     @NonNull
     @Override
     public VideosViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
-        View v = inflater.inflate(R.layout.video_item, parent, false);
+        View v = inflater.inflate(R.layout.item_video, parent, false);
         return new VideosViewHolder(v);
     }
 

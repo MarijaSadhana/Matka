@@ -1,7 +1,6 @@
 package mk.test.matka_v2.adapter;
 
 import android.content.Context;
-import android.media.Image;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -13,16 +12,16 @@ import androidx.recyclerview.widget.RecyclerView;
 import java.util.ArrayList;
 
 import mk.test.matka_v2.R;
-import mk.test.matka_v2.interfaces.HistoryClickInterface;
+import mk.test.matka_v2.interfaces.ImageClickInterface;
 
 public class DetailsAdapter extends RecyclerView.Adapter<DetailsAdapter.DetailsViewHolder> {
 
     private ArrayList<String> exponentImages = new ArrayList<>();
     private LayoutInflater inflater;
     private Context context;
-    private HistoryClickInterface detailsClickInterface;
+    private ImageClickInterface detailsClickInterface;
 
-    public DetailsAdapter(Context context, ArrayList<String> exponentImages, HistoryClickInterface detailsClickInterface){
+    public DetailsAdapter(Context context, ArrayList<String> exponentImages, ImageClickInterface detailsClickInterface){
         this.context = context;
         this.exponentImages = exponentImages;
         this.inflater = LayoutInflater.from(context);
@@ -33,7 +32,7 @@ public class DetailsAdapter extends RecyclerView.Adapter<DetailsAdapter.DetailsV
     @NonNull
     @Override
     public DetailsViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
-        View v = inflater.inflate(R.layout.history_image_item, parent, false);
+        View v = inflater.inflate(R.layout.item_image, parent, false);
         return new DetailsViewHolder(v);
     }
 

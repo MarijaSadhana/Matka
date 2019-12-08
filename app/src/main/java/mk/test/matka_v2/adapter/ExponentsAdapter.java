@@ -33,7 +33,7 @@ public class ExponentsAdapter extends RecyclerView.Adapter<ExponentsAdapter.Expo
     @NonNull
     @Override
     public ExponentsViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
-        View v = inflater.inflate(R.layout.exponent_item, parent, false);
+        View v = inflater.inflate(R.layout.item_exponent, parent, false);
         return new ExponentsViewHolder(v);
     }
 

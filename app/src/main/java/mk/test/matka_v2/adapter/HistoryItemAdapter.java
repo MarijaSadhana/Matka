@@ -12,16 +12,17 @@ import androidx.recyclerview.widget.RecyclerView;
 import java.util.ArrayList;
 
 import mk.test.matka_v2.R;
-import mk.test.matka_v2.interfaces.HistoryClickInterface;
-import mk.test.matka_v2.model.HistoryImage;
+import mk.test.matka_v2.interfaces.ImageClickInterface;
+import mk.test.matka_v2.model.ImageItem;
 
 public class HistoryItemAdapter extends RecyclerView.Adapter<HistoryItemAdapter.HistoryImageViewHolder> {
-    private ArrayList<HistoryImage> images;
+
+    private ArrayList<ImageItem> images;
     private LayoutInflater inflater;
-    private HistoryClickInterface historyClick;
+    private ImageClickInterface historyClick;
     private Context context;
 
-    public HistoryItemAdapter(Context context, ArrayList<HistoryImage> images, HistoryClickInterface historyClick){
+    public HistoryItemAdapter(Context context, ArrayList<ImageItem> images, ImageClickInterface historyClick){
         this.context = context;
         this.images = images;
         this.inflater = LayoutInflater.from(context);
@@ -31,13 +32,13 @@ public class HistoryItemAdapter extends RecyclerView.Adapter<HistoryItemAdapter.
     @NonNull
     @Override
     public HistoryImageViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
-        View v = inflater.inflate(R.layout.history_image_item, parent, false);
+        View v = inflater.inflate(R.layout.item_image, parent, false);
         return new HistoryImageViewHolder(v);
     }
 
     @Override
     public void onBindViewHolder(@NonNull HistoryImageViewHolder holder, int position) {
-        HistoryImage image = images.get(position);
+        ImageItem image = images.get(position);
         holder.historyImage.setImageResource(image.getImage());
     }
 

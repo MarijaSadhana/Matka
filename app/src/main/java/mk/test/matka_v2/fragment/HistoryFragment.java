@@ -20,13 +20,13 @@ import java.util.ArrayList;
 
 import mk.test.matka_v2.R;
 import mk.test.matka_v2.adapter.HistoryItemAdapter;
-import mk.test.matka_v2.interfaces.HistoryClickInterface;
-import mk.test.matka_v2.model.HistoryImage;
+import mk.test.matka_v2.interfaces.ImageClickInterface;
+import mk.test.matka_v2.model.ImageItem;
 
-public class HistoryFragment extends Fragment implements HistoryClickInterface {
+public class HistoryFragment extends Fragment implements ImageClickInterface {
     public static final String TAG = HistoryFragment.class.getSimpleName();
 
-    private ArrayList<HistoryImage> images = new ArrayList<>();
+    private ArrayList<ImageItem> images = new ArrayList<>();
     private RecyclerView imagesRecyclerView;
     private HistoryItemAdapter adapter;
 
@@ -75,9 +75,9 @@ public class HistoryFragment extends Fragment implements HistoryClickInterface {
 
     @Override
     public void onImageClick(int position) {
-        new StfalconImageViewer.Builder<>(getActivity(), images, new ImageLoader<HistoryImage>() {
+        new StfalconImageViewer.Builder<>(getActivity(), images, new ImageLoader<ImageItem>() {
             @Override
-            public void loadImage(ImageView imageView, HistoryImage drawableRes) {
+            public void loadImage(ImageView imageView, ImageItem drawableRes) {
                 imageView.setImageResource(drawableRes.getImage());
                 imageView.setBackgroundColor(getResources().getColor(R.color.color_black_matka));
             }
@@ -88,11 +88,11 @@ public class HistoryFragment extends Fragment implements HistoryClickInterface {
 
     private void loadImages(){
 
-        HistoryImage hi1 = new HistoryImage(R.drawable.history_rv1);
-        HistoryImage hi2 = new HistoryImage(R.drawable.history_rv2);
-        HistoryImage hi3 = new HistoryImage(R.drawable.history_rv3);
-        HistoryImage hi4 = new HistoryImage(R.drawable.history_rv4);
-        HistoryImage hi5 = new HistoryImage(R.drawable.history_cover);
+        ImageItem hi1 = new ImageItem(R.drawable.history_rv1);
+        ImageItem hi2 = new ImageItem(R.drawable.history_rv2);
+        ImageItem hi3 = new ImageItem(R.drawable.history_rv3);
+        ImageItem hi4 = new ImageItem(R.drawable.history_rv4);
+        ImageItem hi5 = new ImageItem(R.drawable.history_cover);
 
         images.add(hi1);
         images.add(hi2);

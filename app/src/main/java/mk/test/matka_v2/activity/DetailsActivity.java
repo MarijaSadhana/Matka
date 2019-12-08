@@ -4,26 +4,20 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
-import android.app.ActionBar;
 import android.os.Bundle;
 import android.view.View;
-import android.widget.Adapter;
 import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.stfalcon.imageviewer.StfalconImageViewer;
 import com.stfalcon.imageviewer.loader.ImageLoader;
 
-import java.util.ArrayList;
-
 import mk.test.matka_v2.R;
 import mk.test.matka_v2.adapter.DetailsAdapter;
-import mk.test.matka_v2.adapter.HistoryItemAdapter;
-import mk.test.matka_v2.interfaces.HistoryClickInterface;
+import mk.test.matka_v2.interfaces.ImageClickInterface;
 import mk.test.matka_v2.model.Exponent;
-import mk.test.matka_v2.model.HistoryImage;
 
-public class DetailsActivity extends AppCompatActivity implements HistoryClickInterface {
+public class DetailsActivity extends AppCompatActivity implements ImageClickInterface {
 
     private ImageView detailsCover;
     private RecyclerView detailsRecyclerView;
