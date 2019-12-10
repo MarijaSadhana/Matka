@@ -13,7 +13,7 @@
 
         <RelativeLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content">
+            android:layout_height="200dp">
 
             <ImageView
                 android:id="@+id/history_cover"
@@ -21,7 +21,7 @@
                 android:layout_height="wrap_content"
                 android:src="@drawable/history_cover"
                 android:layout_alignParentTop="true"
-                android:adjustViewBounds="true"
+                android:scaleType="centerCrop"
                 android:foreground="?attr/selectableItemBackground"/>
 
             <ImageView
@@ -31,30 +31,30 @@
                 android:adjustViewBounds="true"
                 android:layout_alignBottom="@+id/history_cover"/>
 
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/historyRecyclerView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"/>
+
         </RelativeLayout>
 
-        <androidx.recyclerview.widget.RecyclerView
-            android:id="@+id/historyRecyclerView"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="-30dp"/>
-
-        <TextView
+        <mk.test.matka_v2.ui.CustomTextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="@string/history"
-            android:layout_marginLeft="15dp"
-            android:layout_marginRight="15dp"
-            android:layout_marginTop="30dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:layout_marginTop="20dp"
             android:textColor="@color/color_black_matka"
             android:textSize="16sp"
             android:textStyle="bold"/>
 
-        <TextView
+        <mk.test.matka_v2.ui.CustomTextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:textColor="@color/color_black_matka"
-            android:layout_margin="15dp"
+            android:layout_margin="20dp"
             android:text="@string/history_lorem"/>
     </LinearLayout>
 </ScrollView>

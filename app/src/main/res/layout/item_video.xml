@@ -4,14 +4,17 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:orientation="vertical"
     android:layout_width="wrap_content"
-    android:layout_height="wrap_content">
+    android:layout_height="match_parent">
 
     <androidx.cardview.widget.CardView
-        android:layout_width="140dp"
-        android:layout_height="wrap_content"
+        android:layout_width="200dp"
+        android:layout_height="match_parent"
         app:cardCornerRadius="20dp"
         app:cardElevation="5dp"
-        android:layout_margin="10dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="10dp"
         android:foreground="?attr/selectableItemBackground">
 
         <LinearLayout
@@ -21,24 +24,27 @@
 
             <ImageView
                 android:id="@+id/exponent_cover"
-                android:layout_width="140dp"
-                android:layout_height="100dp"
-                tools:src="@drawable/videos_cover"
-                android:scaleType="centerCrop"
-                android:adjustViewBounds="true"
-                android:layout_weight="3"/>
-
-            <TextView
-                android:id="@+id/exponent_title"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:layout_weight="1"
+                tools:src="@drawable/home_cover"
+                android:scaleType="centerCrop"
+                android:adjustViewBounds="true" />
+
+            <mk.test.matka_v2.ui.CustomTextView
+                android:id="@+id/exponent_title"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
                 android:textColor="@color/color_black_matka"
-                android:gravity="center"
                 android:layout_margin="10dp"
+                android:gravity="center_vertical"
+                android:layout_weight="2"
+                android:maxLines="2"
+                android:ellipsize="end"
                 android:textStyle="bold"
-                android:textSize="13sp"
-                android:lines="3"/>
+                android:paddingLeft="5dp"
+                android:paddingRight="5dp"
+                android:textSize="13sp"/>
 
         </LinearLayout>
     </androidx.cardview.widget.CardView>

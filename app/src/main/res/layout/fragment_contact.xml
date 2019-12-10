@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
@@ -8,12 +8,12 @@
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="match_parent"
         android:orientation="vertical">
 
         <RelativeLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content">
+            android:layout_height="200dp">
 
             <ImageView
                 android:id="@+id/contact_cover"
@@ -21,7 +21,7 @@
                 android:layout_height="wrap_content"
                 android:src="@drawable/map"
                 android:layout_alignParentTop="true"
-                android:adjustViewBounds="true"
+                android:scaleType="centerCrop"
                 android:foreground="?attr/selectableItemBackground"/>
 
             <ImageView
@@ -32,78 +32,91 @@
                 android:layout_alignBottom="@+id/contact_cover"/>
         </RelativeLayout>
 
-        <!-- LOKACIJA -->
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="@string/location"
-            android:layout_marginLeft="15dp"
-            android:layout_marginRight="15dp"
-            android:layout_marginTop="-10dp"
-            android:textColor="@color/color_black_matka"
-            android:textSize="16sp"
-            android:textStyle="bold"/>
-
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:textColor="@color/color_black_matka"
-            android:layout_margin="15dp"
-            android:text="@string/hec_matka"
-            android:textSize="13sp"/>
-
-        <!-- RABOTNO VREME -->
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="@string/worktime"
-            android:layout_marginLeft="15dp"
-            android:layout_marginRight="15dp"
-            android:layout_marginTop="15dp"
-            android:textColor="@color/color_black_matka"
-            android:textSize="16sp"
-            android:textStyle="bold"/>
-
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal"
-            android:layout_marginLeft="15dp"
-            android:layout_marginRight="15dp">
-
-            <TextView
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:orientation="vertical">
+        <!-- LOKACIJA -->
+            <mk.test.matka_v2.ui.CustomTextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:textColor="@color/color_black_matka"
-                android:layout_marginTop="15dp"
-                android:layout_marginBottom="15dp"
-                android:layout_marginRight="10dp"
-                android:text="@string/april_october"
-                android:layout_weight="1"
-                android:textSize="13sp"/>
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="@string/time10_15"
-                android:layout_gravity="center"
-                android:layout_marginLeft="10dp"
+                android:text="@string/location"
+                android:layout_marginLeft="15dp"
+                android:layout_marginRight="15dp"
                 android:textColor="@color/color_black_matka"
                 android:textSize="16sp"
                 android:textStyle="bold"/>
 
+            <mk.test.matka_v2.ui.CustomTextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="@color/color_black_matka"
+                android:layout_margin="15dp"
+                android:text="@string/hec_matka"
+                android:textSize="13sp"/>
+
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="0"
+            android:orientation="vertical">
+
+        <!-- RABOTNO VREME -->
+            <mk.test.matka_v2.ui.CustomTextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/worktime"
+                android:layout_marginLeft="15dp"
+                android:layout_marginRight="15dp"
+                android:layout_marginTop="15dp"
+                android:textColor="@color/color_black_matka"
+                android:textSize="16sp"
+                android:textStyle="bold"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal"
+                android:layout_marginLeft="15dp"
+                android:layout_marginRight="15dp"
+                android:layout_marginTop="15dp">
+
+                <mk.test.matka_v2.ui.CustomTextView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:textColor="@color/color_black_matka"
+                    android:layout_marginRight="10dp"
+                    android:text="@string/april_october"
+                    android:layout_weight="1"
+                    android:textSize="13sp"/>
+
+                <mk.test.matka_v2.ui.CustomTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:gravity="center_vertical"
+                    android:text="@string/time10_15"
+                    android:layout_gravity="center"
+                    android:layout_marginLeft="10dp"
+                    android:textColor="@color/color_black_matka"
+                    android:textSize="16sp"
+                    android:textStyle="bold"/>
+
+            </LinearLayout>
         </LinearLayout>
 
         <!-- KONTAKT -->
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:layout_weight="0"
             android:orientation="horizontal"
             android:layout_marginLeft="15dp"
             android:layout_marginRight="15dp"
             android:layout_marginTop="20dp">
 
-            <TextView
+            <mk.test.matka_v2.ui.CustomTextView
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
@@ -113,7 +126,7 @@
                 android:textSize="16sp"
                 android:textStyle="bold"/>
 
-            <TextView
+            <mk.test.matka_v2.ui.CustomTextView
                 android:id="@+id/phone_number"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -130,13 +143,14 @@
         <!-- DO MATKA -->
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
             android:orientation="horizontal"
             android:layout_marginLeft="15dp"
             android:layout_marginRight="15dp"
             android:layout_marginTop="35dp">
 
-            <TextView
+            <mk.test.matka_v2.ui.CustomTextView
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
@@ -151,6 +165,7 @@
                 android:layout_width="40dp"
                 android:layout_height="40dp"
                 android:layout_marginLeft="20dp"
+                android:layout_gravity="center_vertical"
                 android:layout_marginRight="20dp"
                 android:src="@drawable/ic_bus"
                 android:foreground="?attr/selectableItemBackground"/>
@@ -161,6 +176,7 @@
                 android:layout_height="40dp"
                 android:src="@drawable/ic_car"
                 android:layout_marginRight="10dp"
+                android:layout_gravity="center_vertical"
                 android:foreground="?attr/selectableItemBackground"/>
 
 
@@ -169,13 +185,14 @@
         <!-- DO SKOPJE -->
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
             android:orientation="horizontal"
             android:layout_marginLeft="15dp"
             android:layout_marginRight="15dp"
             android:layout_marginTop="35dp">
 
-            <TextView
+            <mk.test.matka_v2.ui.CustomTextView
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
@@ -190,6 +207,7 @@
                 android:layout_width="40dp"
                 android:layout_height="40dp"
                 android:src="@drawable/ic_plane"
+                android:layout_gravity="center_vertical"
                 android:layout_marginLeft="10dp"
                 android:layout_marginRight="10dp"
                 android:foreground="?attr/selectableItemBackground"/>
@@ -199,6 +217,7 @@
                 android:layout_width="40dp"
                 android:layout_height="40dp"
                 android:src="@drawable/ic_bus"
+                android:layout_gravity="center_vertical"
                 android:layout_marginLeft="10dp"
                 android:layout_marginRight="10dp"
                 android:foreground="?attr/selectableItemBackground"/>
@@ -208,21 +227,28 @@
                 android:layout_width="40dp"
                 android:layout_height="40dp"
                 android:src="@drawable/ic_train"
+                android:layout_gravity="center_vertical"
                 android:layout_marginLeft="10dp"
                 android:layout_marginRight="10dp"
                 android:foreground="?attr/selectableItemBackground"/>
 
         </LinearLayout>
 
-        <ImageView
-            android:contentDescription="@string/evn_logo"
-            android:layout_width="50dp"
-            android:layout_height="wrap_content"
-            android:adjustViewBounds="true"
-            android:src="@drawable/evn_logo"
-            android:layout_gravity="center"
-            android:layout_marginTop="40dp"
-            android:layout_marginBottom="20dp"/>
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1">
 
+            <ImageView
+                android:contentDescription="@string/evn_logo"
+                android:layout_width="50dp"
+                android:layout_height="wrap_content"
+                android:adjustViewBounds="true"
+                android:src="@drawable/evn_logo"
+                android:layout_alignParentBottom="true"
+                android:layout_centerHorizontal="true"
+                android:layout_marginBottom="20dp"/>
+
+        </RelativeLayout>
     </LinearLayout>
-</ScrollView>
+</LinearLayout>

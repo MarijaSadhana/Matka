@@ -29,7 +29,7 @@
             android:layout_centerHorizontal="true"
             android:layout_marginTop="100dp"/>
 
-        <Button
+        <mk.test.matka_v2.ui.CustomButtonText
             android:id="@+id/splashButtonContinue"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"

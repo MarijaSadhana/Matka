@@ -20,7 +20,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:src="@drawable/ic_back_button"
-                android:layout_margin="7dp"
+                android:layout_margin="20dp"
                 android:elevation="5dp"
                 android:onClick="onBackClick"
                 android:foreground="?attr/selectableItemBackground"/>
@@ -28,7 +28,7 @@
             <ImageView
                 android:id="@+id/details_cover"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
+                android:layout_height="200dp"
                 tools:src="@drawable/history_cover"
                 android:layout_alignParentTop="true"
                 android:scaleType="centerCrop"
@@ -42,27 +42,27 @@
                 android:adjustViewBounds="true"
                 android:layout_alignBottom="@+id/details_cover"/>
 
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/detailsRecyclerView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"/>
+
         </RelativeLayout>
 
-        <androidx.recyclerview.widget.RecyclerView
-            android:id="@+id/detailsRecyclerView"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="-30dp"/>
-
-        <TextView
+        <mk.test.matka_v2.ui.CustomTextView
             android:id="@+id/exponent_title"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             tools:text="TOPKA"
             android:layout_marginLeft="20dp"
             android:layout_marginRight="20dp"
-            android:layout_marginTop="30dp"
+            android:layout_marginTop="20dp"
             android:textColor="@color/color_black_matka"
             android:textSize="16sp"
             android:textStyle="bold"/>
 
-        <TextView
+        <mk.test.matka_v2.ui.CustomTextView
             android:id="@+id/exponent_details"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"

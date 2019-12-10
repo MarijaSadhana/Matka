@@ -1,70 +1,77 @@
 <?xml version="1.0" encoding="utf-8"?>
-<ScrollView android:layout_height="match_parent"
+
+
+<LinearLayout xmlns:tools="http://schemas.android.com/tools"
+    xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
-    xmlns:android="http://schemas.android.com/apk/res/android">
+    android:layout_height="wrap_content"
+    tools:context=".fragment.HomeFragment"
+    android:orientation="vertical"
+    android:background="@color/color_white_matka">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="200dp">
+
+        <ImageView
+            android:id="@+id/home_cover"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:src="@drawable/home_cover"
+            android:scaleType="centerCrop"/>
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:src="@drawable/overlay"
+            android:adjustViewBounds="true"
+            android:layout_alignBottom="@+id/home_cover"/>
+
+    </RelativeLayout>
 
     <LinearLayout
-        xmlns:tools="http://schemas.android.com/tools"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        tools:context=".fragment.HomeFragment"
-        android:orientation="vertical"
-        android:background="@color/color_white_matka">
+        android:layout_weight="0"
+        android:orientation="vertical">
 
-        <RelativeLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content">
-
-            <ImageView
-                android:id="@+id/home_cover"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:src="@drawable/home_cover"
-                android:layout_alignParentTop="true"
-                android:adjustViewBounds="true"/>
-
-            <ImageView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:src="@drawable/overlay"
-                android:adjustViewBounds="true"
-                android:layout_alignBottom="@+id/home_cover"/>
-        </RelativeLayout>
-
-        <TextView
+        <mk.test.matka_v2.ui.CustomTextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="@string/matka_izlozben_centar"
-            android:layout_marginLeft="15dp"
-            android:layout_marginRight="15dp"
-            android:layout_marginTop="-15dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
             android:textColor="@color/color_black_matka"
             android:textSize="16sp"
             android:textStyle="bold"/>
 
-        <TextView
+        <mk.test.matka_v2.ui.CustomTextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_margin="15dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:layout_marginTop="15dp"
             android:textColor="@color/color_black_matka"
             android:text="@string/home_text"/>
 
-        <TextView
+        <mk.test.matka_v2.ui.CustomTextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="@string/exponents"
-            android:layout_marginLeft="15dp"
-            android:layout_marginRight="15dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
             android:layout_marginTop="15dp"
             android:textColor="@color/color_black_matka"
             android:textStyle="bold"
             android:textSize="16sp"/>
-
-        <androidx.recyclerview.widget.RecyclerView
-            android:id="@+id/exponents_recycler_view"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_margin="15dp"/>
-
     </LinearLayout>
-</ScrollView>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/exponents_recycler_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="15dp"
+        android:layout_weight="1"
+        android:layout_marginBottom="5dp"/>
+
+</LinearLayout>
